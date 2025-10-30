@@ -1,0 +1,16 @@
+settings:
+  alert-threshold: 60
+  autoban-threshold: 90
+  decay-rate: 0.1
+  punishment-command: "ban %player% X-Ray detected (VeilGuard)"
+  use-protocollib: auto
+
+checks:
+  MineNotify: true
+  MinePattern: true
+  MineSight: true
+  Baritone: true
+  FakeOreBait: true
+  RayTraceCheck: true
+  DensityAnomaly: true
+  TimeReaction: true
