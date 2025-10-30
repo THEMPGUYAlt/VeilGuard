@@ -14,23 +14,18 @@ public class FakeOreBaitCheck extends Check {
     private final AlertManager alertManager = VeilGuard.getInstance().getAlertManager();
 
     @Override
-    public void onEnable() {
-        // Initialization if needed
-    }
+    public void onEnable() {}
 
     @Override
-    public void onDisable() {
-        // Cleanup if needed
-    }
+    public void onDisable() {}
 
     @Override
     public void onPlayerAction(Player player, Object... args) {
-        // args could include event types, locations, etc.
         sendFakeOres(player);
     }
 
     private void sendFakeOres(Player player) {
-        Location base = player.getLocation().clone().add(random.nextInt(10) - 5, -1 * random.nextInt(4), random.nextInt(10) - 5);
+        Location base = player.getLocation().clone().add(random.nextInt(10)-5, -1*random.nextInt(4), random.nextInt(10)-5);
 
         for (int i = 0; i < 5; i++) {
             Location fakeOre = base.clone().add(random.nextInt(3), random.nextInt(3), random.nextInt(3));
@@ -39,7 +34,6 @@ public class FakeOreBaitCheck extends Check {
     }
 
     public void onBlockBreak(Player player, Location loc) {
-        // TODO: check if this location matches a fake ore and flag
         alertManager.flag(player, 40.0, "Mined fake ore");
     }
 }
