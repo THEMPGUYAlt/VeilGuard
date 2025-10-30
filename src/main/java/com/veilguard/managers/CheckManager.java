@@ -1,7 +1,7 @@
 package com.veilguard.managers;
 
-import com.veilguard.VeilGuard;
 import com.veilguard.checks.Check;
+import com.veilguard.VeilGuard;
 import org.bukkit.entity.Player;
 
 import java.util.ArrayList;
