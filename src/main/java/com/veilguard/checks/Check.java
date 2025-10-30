@@ -7,8 +7,7 @@ public abstract class Check {
     private String name;
     private boolean enabled = true;
 
-    public Check() {
-    }
+    public Check() {}
 
     public Check(String name) {
         this.name = name;
