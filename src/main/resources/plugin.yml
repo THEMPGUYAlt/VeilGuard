@@ -3,10 +3,8 @@ version: 1.0.0
 main: com.veilguard.VeilGuard
 api-version: 1.16
 depend: [ProtocolLib]
-softdepend: []
 commands:
   veilguard:
     description: VeilGuard main command
     usage: /<command> [args]
     permission: veilguard.admin
-    permission-message: You do not have permission to use this command.
