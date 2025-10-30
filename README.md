@@ -26,7 +26,7 @@ VeilGuard is an advanced, packet-based Anti-Xray and behavior analysis plugin fo
 
 Example configuration snippet:
 
-```
+```yaml
 settings:
   alert-threshold: 60
   autoban-threshold: 90
