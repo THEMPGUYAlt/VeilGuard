@@ -2,6 +2,8 @@ package com.veilguard;
 
 import com.veilguard.managers.CheckManager;
 import com.veilguard.managers.AlertManager;
+import com.veilguard.checks.FakeOreBaitCheck;
+import com.veilguard.checks.MineSightCheck;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class VeilGuard extends JavaPlugin {
@@ -16,7 +18,6 @@ public class VeilGuard extends JavaPlugin {
         instance = this;
         saveDefaultConfig();
 
-        // Detect ProtocolLib
         protocolLibAvailable = getServer().getPluginManager().getPlugin("ProtocolLib") != null;
         if (protocolLibAvailable) {
             getLogger().info("ProtocolLib detected! Advanced packet checks enabled.");
@@ -27,8 +28,8 @@ public class VeilGuard extends JavaPlugin {
         alertManager = new AlertManager(this);
         checkManager = new CheckManager(this);
 
-        checkManager.registerCheck(new com.veilguard.checks.FakeOreBaitCheck());
-        checkManager.registerCheck(new com.veilguard.checks.MineSightCheck());
+        checkManager.registerCheck(new FakeOreBaitCheck());
+        checkManager.registerCheck(new MineSightCheck());
 
         getLogger().info("VeilGuard has been enabled.");
     }
